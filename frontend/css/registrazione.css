@@ -1,0 +1,15 @@
+ body {
+   background: linear-gradient(135deg, #ffffff, #cccccc);
+   min-height: 100vh;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .form-box {
+   background: white;
+   padding: 2rem;
+   border-radius: 1rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }

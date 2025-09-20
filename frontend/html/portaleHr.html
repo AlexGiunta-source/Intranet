@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portale HR</title>
+  <link rel="icon" type="image/x icon " href="/icone/hr.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/portaleHr.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="/js/portaleHr.js" defer></script>
+</head>
+
+<body class="bg-success-subtle">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Portale HR</h1>
+    <div class="d-flex justify-content-end mb-3">
+      <button type="button" class="btn btn-danger" id="pulsanteLogout">Logout</button>
+    </div>
+    <div class="contenitore-principale mb-4">
+      <div>
+        <h3 class="mb-3 titolo text-center">Richieste:</h3>
+      </div>
+      <div class="body-info">
+        <p class="info-text">Richieste in attesa : <span class="info-data" id="attesa"></span></p>
+        <p class="info-text">Richieste accettate : <span class="info-data" id="accettate"></span></p>
+        <p class="info-text">Richieste rifiutate : <span class="info-data" id="rifiutate"></span></p>
+        <p class="info-text">Richieste totali : <span class="info-data" id="totali"></span></p>
+        <p class="info-text">Richieste per malattia : <span class="info-data" id="malattia"></span></p>
+        <p class="info-text">Richieste per permesso : <span class="info-data" id="permesso"></span></p>
+        <p class="info-text">Richieste per ferie : <span class="info-data" id="ferie"></span></p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="cercautente" class="form-label fw-bold">Filtra per utente</label>
+      <select class="form-select" id="cercautente">
+        <option value="">Tutti</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="statorichiesta" class="form-label fw-bold">Filtra per stato</label>
+      <select class="form-select" id="statorichiesta">
+        <option value="">Tutti</option>
+        <option value="in attesa">In attesa</option>
+        <option value="accettata">Accettata</option>
+        <option value="rifiutata">Rifiutata</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="datainserimento" class="form-label fw-bold">Data inserimento</label>
+      <input type="date" class="form-control" id="datainserimento">
+    </div>
+  </div>
+  <div class="contenitore-principale mt-4">
+    <h3 class="mb-3">Lista richieste</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <td><strong>Utente</strong></td>
+            <th>Data inizio</th>
+            <th>Data fine</th>
+            <th>Tipo richiesta</th>
+            <th>Motivazione</th>
+            <th>Stato</th>
+            <th>Note hr</th>
+            <th>Azioni</th>
+          </tr>
+        </thead>
+        <tbody id="tabellaRichieste">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
